@@ -4,14 +4,8 @@ import ge.epam.nika.model.productEntity.Product;
 
 import java.util.List;
 
-public class FactoryOrder {
-    private List<Product> productList;
-
-    public List<Product> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+public class FactoryOrder extends Order{
+    public FactoryOrder(List<Product> productList) {
+        super(productList);
     }
 }

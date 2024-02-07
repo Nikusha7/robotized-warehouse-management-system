@@ -4,24 +4,18 @@ import ge.epam.nika.model.productEntity.Product;
 
 import java.util.List;
 
-public class MarketOrder {
-    private List<Product> productList;
-
+public class MarketOrder extends Order{
     private String marketLocation;
-
-    public List<Product> getProductList() {
-        return productList;
+    public MarketOrder(List<Product> productList, String marketLocation) {
+        super(productList);
+        this.marketLocation = marketLocation;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
-    }
-
-    public String getMarketLocation() {
+    public String getLocation() {
         return marketLocation;
     }
 
-    public void setMarketLocation(String marketLocation) {
+    public void setLocation(String marketLocation) {
         this.marketLocation = marketLocation;
     }
 }
